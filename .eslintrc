@@ -1,0 +1,39 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals" : {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__COVERAGE__" : false,
+    "__BASENAME__" : false,
+    "__API_BASE__" : false
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "quotes": [2, "single"],
+    "strict": [2, "never"],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "semi" : [2, "never"],
+    "max-len": [2, 120, 2],
+    "camelcase": [0, {properties: "never"}],
+    "react/jsx-space-before-closing": [0, "never"],
+    "react/jsx-no-bind": [0],
+    "jsx-quotes": ["error", "prefer-single"]
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends" : [
+    "standard",
+    "standard-react"
+  ],
+}
