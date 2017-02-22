@@ -15,6 +15,10 @@ Thead.defaultProps = {
   bgColor: 'primary'
 }
 
+const Tbody = styled(Base('tbody'))`
+
+`
+
 const Th = styled(Base('th'))`
 
 `
@@ -35,39 +39,31 @@ const Td = styled(Base('td'))`
   border-right: 1px solid ${props => props.theme.colors.gray}
 `
 
-const renderHeadings = (head) => (
-  <Thead>
-    <Tr>
-      {Object.keys(head[0]).map((item, key) => {
-        return <Th key={key}>{item}</Th>
-      })}
-    </Tr>
-  </Thead>
-)
-
-const renderBody = (data, highlightRow = null) => (
-  <tbody>
-    {data.map((item, key) => {
-      return (
-        <Tr key={key}>
-          {Object.keys(item).map((ite, id) => {
-            let shouldHighlight = highlightRow && highlightRow === key + 1
-            let row = shouldHighlight
-              ? (<Highlight key={id}>{item[ite]}</Highlight>)
-              : (<Td key={id}>{item[ite]}</Td>)
-            return row
+const PrintTable = ({data, highlightRow = null, head, body, table}) => {
+  return (
+    <Table {...table}>
+      <Thead {...head}>
+        <Tr>
+          {Object.keys(data[0]).map((item, key) => {
+            return <Th key={key}>{item}</Th>
           })}
         </Tr>
-      )
-    })}
-  </tbody>
-)
-
-const PrintTable = ({data, highlightRow}) => {
-  return (
-    <Table>
-      {renderHeadings(data)}
-      {renderBody(data, highlightRow)}
+      </Thead>
+      <Tbody {...body}>
+        {data.map((item, key) => {
+          return (
+            <Tr key={key}>
+              {Object.keys(item).map((ite, id) => {
+                let shouldHighlight = highlightRow && highlightRow === key + 1
+                let row = shouldHighlight
+                  ? (<Highlight key={id}>{item[ite]}</Highlight>)
+                  : (<Td key={id}>{item[ite]}</Td>)
+                return row
+              })}
+            </Tr>
+          )
+        })}
+      </Tbody>
     </Table>
   )
 }
@@ -76,6 +72,9 @@ PrintTable.displayName = 'PrintTable'
 
 PrintTable.propTypes = {
   data: PropTypes.array,
+  head: PropTypes.object,
+  body: PropTypes.object,
+  table: PropTypes.object,
   highlightRow: PropTypes.number
 }
 

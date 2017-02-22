@@ -48,10 +48,13 @@ storiesOf('Table', module)
       <Table data={fakeData} />
     </Flex>
   ))
-  .add('<Table bgColor=success />', () => (
+  .add('<Table header={{}} body={{}} />', () => (
     <Flex column>
-      <h1>Custom Header Color</h1>
-      <Table data={fakeData} />
+      <h1>Custom</h1>
+      <Table
+        data={fakeData}
+        head={{bgColor: 'success'}}
+        body={{bgColor: 'lightgray'}}/>
     </Flex>
   ))
   .add('Row Highlight Example', () => (
