@@ -42,7 +42,7 @@ const StyledCheckBox = styled(Base('input'))`
 
 const Checkbox = ({label, name, message, auto, ...rest}) => (
   <Flex column>
-    <Flex align='center' style={{alignItems: 'center', marginTop: 3}}>
+    <Flex auto={auto} style={{marginTop: 3}}>
       <Label htmlFor={name}>{label}</Label>
       <Space auto={auto}/>
       <StyledCheckBox type='checkbox' name={name} {...rest} />

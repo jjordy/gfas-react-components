@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import Box from '.'
-import Flex from '../Flex'
+import { Divider, Flex } from 'components'
 
 const styles = {
   backgroundColor: '#e7e7e7',
@@ -10,27 +10,164 @@ const styles = {
 
 storiesOf('Box', module)
   .add('<Box />', () => (
-    <Flex column auto>
-      <h1>Box Component</h1>
+    <div>
       <Flex p={1}>
-        <Box col={12} style={styles}>Box 12</Box>
+        <h1>Box Component</h1>
+        <Divider />
       </Flex>
-      <Flex auto p={1}>
-        <Box col={6} style={styles}>Box 6</Box>
-        <Box col={6} style={styles}>Box 6</Box>
-      </Flex>
-      <Flex auto p={1}>
-        <Box col={4} style={styles}>Box 4</Box>
-        <Box col={4} style={styles}>Box 4</Box>
-        <Box col={4} style={styles}>Box 4</Box>
+      <Flex colum p={1}>
+        <Box col={12} bgColor='warning'>
+          <Flex justify='center' align='center'>
+            Box 12
+          </Flex>
+        </Box>
       </Flex>
       <Flex p={1}>
-        <Box col={3} style={styles}>Box 3</Box>
-        <Box col={3} style={styles}>Box 3</Box>
-        <Box col={3} style={styles}>Box 3</Box>
-        <Box col={3} style={styles}>Box 3</Box>
+        <Box col={6} bgColor='info'>
+          <Flex justify='center' align='center'>
+            Box 6
+          </Flex>
+        </Box>
+        <Box col={6} bgColor='error'>
+          <Flex justify='center' align='center'>
+            Box 6
+          </Flex>
+        </Box>
       </Flex>
-    </Flex>
+      <Flex p={1}>
+        <Box col={4} bgColor='success'>
+          <Flex justify='center' align='center'>
+            Box 4
+          </Flex>
+        </Box>
+        <Box col={4} bgColor='secondary'>
+          <Flex justify='center' align='center'>
+            Box 4
+          </Flex>
+        </Box>
+        <Box col={4} bgColor='success'>
+          <Flex justify='center' align='center'>
+            Box 4
+          </Flex>
+        </Box>
+      </Flex>
+      <Flex p={1}>
+        <Box col={3} bgColor='primary'>
+          <Flex justify='center' align='center'>
+            Box 3
+          </Flex>
+        </Box>
+        <Box col={3} bgColor='error'>
+          <Flex justify='center' align='center'>
+            Box 3
+          </Flex>
+        </Box>
+        <Box col={3} bgColor='info'>
+          <Flex justify='center' align='center'>
+            Box 3
+          </Flex>
+        </Box>
+        <Box col={3} bgColor='warning'>
+          <Flex justify='center' align='center'>
+            Box 3
+          </Flex>
+        </Box>
+      </Flex>
+      <Flex p={1}>
+        <Box col={2} bgColor='secondary'>
+          <Flex justify='center' align='center'>
+            Box 2
+          </Flex>
+        </Box>
+        <Box col={2} bgColor='primary'>
+          <Flex justify='center' align='center'>
+            Box 2
+          </Flex>
+        </Box>
+        <Box col={2} bgColor='success'>
+          <Flex justify='center' align='center'>
+            Box 2
+          </Flex>
+        </Box>
+        <Box col={2} bgColor='info'>
+          <Flex justify='center' align='center'>
+            Box 2
+          </Flex>
+        </Box>
+        <Box col={2} bgColor='warning'>
+          <Flex justify='center' align='center'>
+            Box 2
+          </Flex>
+        </Box>
+        <Box col={2} bgColor='error'>
+          <Flex justify='center' align='center'>
+            Box 2
+          </Flex>
+        </Box>
+      </Flex>
+      <Flex p={1}>
+        <Box col={1} bgColor='secondary'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='primary'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='success'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='info'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='warning'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='error'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='secondary'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='primary'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='success'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='info'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='warning'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+        <Box col={1} bgColor='error'>
+          <Flex justify='center' align='center'>
+            Box 1
+          </Flex>
+        </Box>
+      </Flex>
+    </div>
   ))
   .add('<Box align=center />', () => (
     <Flex column auto>

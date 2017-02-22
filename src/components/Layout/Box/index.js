@@ -6,6 +6,8 @@ const calcWidth = (col, total = 12) => {
 }
 
 const Box = styled(Base())`
+  flex: 1;
+  margin: auto;
   align-self: ${props => props.align ? props.align : 'flex-start'}
   width: ${props => props.col ? calcWidth(props.col) : 100}%
 `

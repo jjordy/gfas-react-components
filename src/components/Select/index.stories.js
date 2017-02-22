@@ -18,14 +18,15 @@ const longListOfOptions = [
 
 storiesOf('Select', module)
   .add('<Select />', () => (
-    <Flex auto column>
-      <Panel>
-        <PanelHeader bgColor='success'>Radio Buttons</PanelHeader>
-        <form>
-          <Flex column>
-            <Select name='gender' label='Male' options={longListOfOptions}/>
-          </Flex>
-        </form>
-      </Panel>
+    <Flex auto column p={1}>
+      <Select name='gender' label='Male' options={longListOfOptions}/>
+      <Select name='gender' label='NO Label' noLabel options={longListOfOptions}/>
+      <Select name='gender' label='Male' options={longListOfOptions} success/>
+      <Select
+        name='gender'
+        message='Hello this is a message you can also use these.'
+        label='Male'
+        options={longListOfOptions}
+        error/>
     </Flex>
   ))

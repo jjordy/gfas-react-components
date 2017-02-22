@@ -23,6 +23,12 @@ const Tr = styled(Base('tr'))`
   text-align: center;
 `
 
+const Highlight = styled('td')`
+  color: #FFF;
+  font-weight: 900;
+  background-color:${props => props.color || props.theme.colors.warning}
+`
+
 const Td = styled(Base('td'))`
   font-weight: 700;
   border-bottom: 1px solid ${props => props.theme.colors.gray}
@@ -39,13 +45,17 @@ const renderHeadings = (head) => (
   </Thead>
 )
 
-const renderBody = (data) => (
+const renderBody = (data, highlightRow = null) => (
   <tbody>
     {data.map((item, key) => {
       return (
         <Tr key={key}>
           {Object.keys(item).map((ite, id) => {
-            return <Td key={id}>{item[ite]}</Td>
+            let shouldHighlight = highlightRow && highlightRow === key + 1
+            let row = shouldHighlight
+              ? (<Highlight key={id}>{item[ite]}</Highlight>)
+              : (<Td key={id}>{item[ite]}</Td>)
+            return row
           })}
         </Tr>
       )
@@ -53,11 +63,11 @@ const renderBody = (data) => (
   </tbody>
 )
 
-const PrintTable = ({data}) => {
+const PrintTable = ({data, highlightRow}) => {
   return (
     <Table>
       {renderHeadings(data)}
-      {renderBody(data)}
+      {renderBody(data, highlightRow)}
     </Table>
   )
 }
@@ -65,7 +75,8 @@ const PrintTable = ({data}) => {
 PrintTable.displayName = 'PrintTable'
 
 PrintTable.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array,
+  highlightRow: PropTypes.number
 }
 
 export default PrintTable
