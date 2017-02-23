@@ -3,7 +3,9 @@
   "version": "3.0.4",
   "description": "Client side boilerplate",
   "main": "./lib/components/index.js",
+  "module": "./lib/components/index.js",
   "scripts": {
+    "build": "better-npm-run build",
     "dev": "npm run storybook",
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
@@ -11,12 +13,11 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "better-npm-run test",
     "test:dev": "npm run test -- --watch",
-    "build-lib": "SET NODE_ENV=production && rimraf lib && mkdirp lib && babel ./src/ -d . --ignore __tests__ --out-dir lib",
-    "prepublish": "npm run build-lib"
+    "prepublish": "npm run build"
   },
   "betterScripts": {
     "build": {
-      "command": "webpack --config webpack.config.js",
+      "command": "rimraf lib && mkdirp lib && babel ./src/ -d . --ignore __tests__ --out-dir lib",
       "env": {
         "NODE_ENV": "production"
       }

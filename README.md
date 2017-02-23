@@ -84,7 +84,7 @@ While developing, you will probably rely mostly on `npm run dev`; however, there
 |------------------|-----------|
 |`dev`| Development Mode |
 |`lint`|Lint all `.js` files.|
-|`build-lib`| Build Production Library.|
+|`build`| Build Production Library.|
 |`lint:fix`|Lint and fix all `.js` files. [Read more on this](http://eslint.org/docs/user-guide/command-line-interface.html#fix).|
 
 ## Project Structure
