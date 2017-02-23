@@ -5,7 +5,6 @@ import Text from '../Text'
 import Label from '../Label'
 import { animations } from '../../theme'
 
-
 const Input = ({label, noLabel, success, error, message, ...rest}) => (
   <InputContainer {...rest}>
     <Label
@@ -24,7 +23,7 @@ const Input = ({label, noLabel, success, error, message, ...rest}) => (
 )
 
 Input.propTypes = {
-  error: React.PropTypes,
+  error: React.PropTypes.string,
   label: React.PropTypes.string.isRequired,
   noLabel: React.PropTypes.bool,
   message: React.PropTypes.string,
@@ -42,15 +41,14 @@ const InputContainer = styled(Base('div'))`
 
 const StyledInput = styled(Base('input'))`
   width: 100%;
-  height: 30px;
+  height: 34px;
   font-size: 1.0rem;
-  margin-top: 5px;
   color: ${props => props.theme.colors.black}
   padding-left: .5rem;
   line-height: 1.58;
   font-weight: 300;
   border: ${props => props.theme.borderWidth}px solid
-  ${props => props.error ? props.theme.colors.error : props.success 
+  ${props => props.error ? props.theme.colors.error : props.success
     ? props.theme.colors.success : props.theme.colors.gray};
   &:focus {
     outline: none;

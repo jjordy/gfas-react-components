@@ -10,8 +10,8 @@ storiesOf('Input', module)
         <h1>Input</h1>
         <Divider />
         <Input label='Default' />
-        <Flex>
-          <Input rounded='left' noLabel label='No Label' placeholder='Hidden label' />
+        <Flex mt={2}>
+          <Input rounded='left' noLabel label='No Label' placeholder='Hidden label For Inline Forms' />
           <Button bgColor='primary' rounded='right'>Submit</Button>
         </Flex>
         <Input rounded={false} label='Not Rounded' />

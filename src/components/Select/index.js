@@ -6,7 +6,7 @@ import Flex from '../Layout/Flex'
 import Text from '../Text'
 
 const StyledSelectBox = styled(Base('select'))`
-  height: 30px;
+  height: 34px;
   border: 0;
   appearance: none;
   width: 100%;
@@ -18,7 +18,6 @@ const StyledSelectBox = styled(Base('select'))`
   border: ${props => props.theme.borderWidth}px solid
   ${props => props.error ? props.theme.colors.error : props.success
     ? props.theme.colors.success : props.theme.colors.gray};
-  margin-top: 5px;
   &:focus {
     outline: 0;
   }

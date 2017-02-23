@@ -13,4 +13,9 @@ const Label = styled(Base('label'))`
   flex-direction: column;
 `
 
+Label.defaultProps = {
+  mt: 1,
+  mb: 1
+}
+
 export default Label
