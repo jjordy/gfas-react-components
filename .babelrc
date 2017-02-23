@@ -10,7 +10,7 @@
       ]
     },
     "production": {
-      presets: [
+      "presets": [
         ["es2015", {"modules": false, "loose": true}],"stage-0", "react"]
     }
   }
