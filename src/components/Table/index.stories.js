@@ -35,7 +35,10 @@ class HighlightExample extends React.Component {
             value={this.state.gradelevel}
             onChange={this.handleChangeGradeLevel}/>
         </Box>
-        <Table data={fakeData} highlightRow={this.state.gradelevel}/>
+        <Table
+          data={fakeData}
+          highlightRow={this.state.gradelevel}
+          highlightColor='rgba(255, 0, 0, 0.4)'/>
       </Flex>
     )
   }
@@ -54,7 +57,7 @@ storiesOf('Table', module)
       <Table
         data={fakeData}
         head={{bgColor: 'success'}}
-        body={{bgColor: 'gray'}}/>
+        body={{bgColor: 'gray', color: 'secondary'}}/>
     </Flex>
   ))
   .add('Row Highlight Example', () => (

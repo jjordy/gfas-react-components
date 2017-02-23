@@ -1,7 +1,7 @@
 import { keyframes } from 'styled-components'
 
 const theme = {
-  sizes: [16, 18, 24, 32, 36, 48],
+  sizes: [48, 32, 26, 20, 16, 12],
   padding: [0, 6, 12, 24, 32, 64],
   margin: [0, 8, 16, 24, 32, 64],
   borderWidth: 1,

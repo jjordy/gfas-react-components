@@ -4,7 +4,7 @@ import Base from '../Base'
 
 const StyledToolbar = styled(Base('nav'))`
   display: flex;
-  height: 50px;
+  align-items: center;
   padding: ${props => props.theme.padding[1]}px
 `
 

@@ -20,7 +20,7 @@ const Tbody = styled(Base('tbody'))`
 `
 
 const Th = styled(Base('th'))`
-
+  font-weight: 400;
 `
 
 const Tr = styled(Base('tr'))`
@@ -34,12 +34,12 @@ const Highlight = styled('td')`
 `
 
 const Td = styled(Base('td'))`
-  font-weight: 700;
+  font-weight: 400;
   border-bottom: 1px solid ${props => props.theme.colors.gray}
   border-right: 1px solid ${props => props.theme.colors.gray}
 `
 
-const PrintTable = ({data, highlightRow = null, head, body, table}) => {
+const PrintTable = ({data, highlightRow = null, highlightColor, head, body, table}) => {
   return (
     <Table {...table}>
       <Thead {...head}>
@@ -56,7 +56,7 @@ const PrintTable = ({data, highlightRow = null, head, body, table}) => {
               {Object.keys(item).map((ite, id) => {
                 let shouldHighlight = highlightRow && highlightRow === key + 1
                 let row = shouldHighlight
-                  ? (<Highlight key={id}>{item[ite]}</Highlight>)
+                  ? (<Highlight key={id} color={highlightColor}>{item[ite]}</Highlight>)
                   : (<Td key={id}>{item[ite]}</Td>)
                 return row
               })}
@@ -75,7 +75,8 @@ PrintTable.propTypes = {
   head: PropTypes.object,
   body: PropTypes.object,
   table: PropTypes.object,
-  highlightRow: PropTypes.number
+  highlightRow: PropTypes.number,
+  highlightColor: PropTypes.string
 }
 
 export default PrintTable
