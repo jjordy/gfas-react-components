@@ -3,6 +3,7 @@
   "version": "3.0.9",
   "description": "Client side boilerplate",
   "main": "./lib/components/index.js",
+  "module": "./lib/components/index.js",
   "scripts": {
     "build": "NODE_ENV=production && rimraf lib && mkdirp lib && babel ./src/ -d . --ignore __tests__ --out-dir lib",
     "dev": "npm run storybook",
