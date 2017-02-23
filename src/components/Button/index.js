@@ -19,6 +19,7 @@ const FadeInButton = styled(Base('button'))`
     }
     &:focus{
       outline: 0;
+      animation: 1s ${animations.pulse} ease-in;
     }
 `
 

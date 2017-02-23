@@ -1,15 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import className from 'classnames'
-import Base from '../Base'
 import AccordionItemBody from './AccordionItemBody'
 import AccordionItemTitle from './AccordionItemTitle'
-import styled from 'styled-components'
 
-
-const ItemBody = styled(Base('div'))`
-  border: ${props => props.theme.borderWidth}px solid ${props => props.theme.colors.lightgray}
-`
 export default class AccordionItem extends Component {
 
   constructor (props) {
@@ -22,7 +16,7 @@ export default class AccordionItem extends Component {
   }
 
   componentWillMount () {
-    this.uuid = Math.random() * 1000
+    this.uuid = (Math.random() * 1000).toString()
   }
 
   componentDidUpdate (prevProps) {

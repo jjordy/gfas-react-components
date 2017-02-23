@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Base from '../Base'
 import Heading from '../Heading'
 import Flex from '../Layout/Flex'
+import Space from '../Layout/Space'
+import Glyph from '../Glyph'
 
 const ItemTitle = styled(Base('div'))`
   border: 1px solid #e7e7e7;
@@ -19,9 +21,11 @@ export default class AccordionItemTitle extends Component {
         id={`react-safona-item-title-${this.props.uuid}`}
         onClick={this.props.onClick}
         style={{cursor: 'pointer'}}>
-        <Flex justify='space-between'>
+        <Flex justify='space-between' align='center'>
           <Heading level={4} p={1} strong>{this.props.title}</Heading>
           <Heading level={5} p={1} strong>{this.props.subTitle}</Heading>
+          <Space auto />
+          <Glyph p={2} xs icon='chevron-down' />
         </Flex>
       </ItemTitle>
     )

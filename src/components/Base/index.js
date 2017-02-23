@@ -18,7 +18,7 @@ const Base = (tagname = 'div') => styled[tagname]`
   box-sizing: border-box;
   font-family: ${props => props.theme.fontFamily ? props.theme.fontFamily : 'inherit'}
   color: ${props => props.color ? props.theme.colors[props.color] : 'inherit'}
-  background-color: ${props => props.bgColor ? props.theme.colors[props.bgColor] : 'transparent'}
+  background-color: ${props => props.bgColor ? props.theme.colors[props.bgColor] || props.bgColor : 'transparent'}
   padding: ${props => props.p ? props.theme.padding[props.p] : props.theme.padding[0]}px
   margin: ${props => props.m ? props.theme.margin[props.m] : 0}px
   border-top-left-radius: ${props => calcBorderRadius(props, 'top-left')}px

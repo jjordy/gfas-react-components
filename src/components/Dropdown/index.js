@@ -4,6 +4,8 @@ import Base from '../Base'
 import Flex from '../Layout/Flex'
 import Button from '../Button'
 import Fixed from '../Fixed'
+import Space from '../Layout/Space'
+import Glyph from '../Glyph'
 
 const DropdownContainer = styled(Base('div'))`
   position: relative;
@@ -12,6 +14,7 @@ const DropdownContainer = styled(Base('div'))`
 
 const StyledDropdown = styled(Base('div'))`
   background-color: #FFF;
+  position: absolute;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   width: 100%;
 `
@@ -42,8 +45,11 @@ export default class Dropdown extends React.Component {
             <Button
               bgColor='transparent'
               onClick={this.toggleOpen}>
-              {title}
-              &#x25BC;
+              <Flex align='center'>
+                {title}
+                <Space />
+                <Glyph xs icon='chevron-down' fixed />
+              </Flex>
             </Button>
           </Flex>
           {open && <StyledDropdown>
@@ -52,7 +58,7 @@ export default class Dropdown extends React.Component {
             </Flex>
           </StyledDropdown>}
         </DropdownContainer>
-        {open && 
+        {open &&
           <Fixed
             top
             left
