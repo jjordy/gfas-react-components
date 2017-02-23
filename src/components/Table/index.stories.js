@@ -42,19 +42,19 @@ class HighlightExample extends React.Component {
 }
 
 storiesOf('Table', module)
-  .add('<Table />', () => (
+  .add('Default Table', () => (
     <Flex column>
       <h1>Default</h1>
       <Table data={fakeData} />
     </Flex>
   ))
-  .add('<Table header={{}} body={{}} />', () => (
+  .add('Custom Table', () => (
     <Flex column>
       <h1>Custom</h1>
       <Table
         data={fakeData}
         head={{bgColor: 'success'}}
-        body={{bgColor: 'lightgray'}}/>
+        body={{bgColor: 'gray'}}/>
     </Flex>
   ))
   .add('Row Highlight Example', () => (

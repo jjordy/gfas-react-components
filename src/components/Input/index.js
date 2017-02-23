@@ -5,6 +5,37 @@ import Text from '../Text'
 import Label from '../Label'
 import { animations } from '../../theme'
 
+
+const Input = ({label, noLabel, success, error, message, ...rest}) => (
+  <InputContainer {...rest}>
+    <Label
+      error={error}
+      success={success}
+      noLabel={noLabel}>
+      {label}
+    </Label>
+    <StyledInput
+      error={error}
+      success={success}
+      {...rest} />
+    {!error && message && <Text sm color={success ? 'success' : 'black'}>{message}</Text>}
+    {error && <Text sm color={error ? 'error' : 'black'}>{error}</Text>}
+  </InputContainer>
+)
+
+Input.propTypes = {
+  error: React.PropTypes,
+  label: React.PropTypes.string.isRequired,
+  noLabel: React.PropTypes.bool,
+  message: React.PropTypes.string,
+  success: React.PropTypes.bool
+}
+
+Input.defaultProps = {
+  rounded: true,
+  noLabel: false
+}
+
 const InputContainer = styled(Base('div'))`
   width: 100%;
 `
@@ -31,24 +62,4 @@ const StyledInput = styled(Base('input'))`
   }
 `
 
-const Input = ({label, noLabel, success, error, message, ...rest}) => (
-  <InputContainer {...rest}>
-    <Label error={error} success={success} noLabel={noLabel}>{label}</Label>
-    <StyledInput error={error} success={success} {...rest} />
-    {message && <Text sm color={error ? 'error' : success ? 'success' : 'black'}>{message}</Text>}
-  </InputContainer>
-)
-
-Input.propTypes = {
-  error: React.PropTypes.object,
-  label: React.PropTypes.string.isRequired,
-  noLabel: React.PropTypes.bool,
-  message: React.PropTypes.string,
-  success: React.PropTypes.bool
-}
-
-Input.defaultProps = {
-  rounded: true,
-  noLabel: false
-}
 export default Input

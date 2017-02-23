@@ -7,6 +7,30 @@ import Text from '../Text'
 import Label from '../Label'
 import { animations } from '../../theme'
 
+const Checkbox = ({label, name, message, auto, ...rest}) => (
+  <Flex column>
+    <Flex auto={auto} style={{marginTop: 3}}>
+      <Label htmlFor={name}>{label}</Label>
+      <Space auto={auto}/>
+      <StyledCheckBox type='checkbox' name={name} {...rest} />
+    </Flex>
+    <Flex column mb={0} mt={1} auto justify='center' align='center'>
+      {message ? <Text sm>{message}</Text> : null}
+    </Flex>
+  </Flex>
+)
+
+Checkbox.propTypes = {
+  auto: React.PropTypes.bool,
+  label: React.PropTypes.string,
+  name: React.PropTypes.string,
+  message: React.PropTypes.string
+}
+
+Checkbox.defaultProps = {
+  auto: false
+}
+
 const StyledCheckBox = styled(Base('input'))`
   background: #fff;
   border-radius: 4px;
@@ -39,29 +63,5 @@ const StyledCheckBox = styled(Base('input'))`
     }
   }
 `
-
-const Checkbox = ({label, name, message, auto, ...rest}) => (
-  <Flex column>
-    <Flex auto={auto} style={{marginTop: 3}}>
-      <Label htmlFor={name}>{label}</Label>
-      <Space auto={auto}/>
-      <StyledCheckBox type='checkbox' name={name} {...rest} />
-    </Flex>
-    <Flex column mb={0} mt={1} auto justify='center' align='center'>
-      {message ? <Text sm>{message}</Text> : null}
-    </Flex>
-  </Flex>
-)
-
-Checkbox.propTypes = {
-  auto: React.PropTypes.bool,
-  label: React.PropTypes.string,
-  name: React.PropTypes.string,
-  message: React.PropTypes.string
-}
-
-Checkbox.defaultProps = {
-  auto: false
-}
 
 export default Checkbox

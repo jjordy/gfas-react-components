@@ -11,8 +11,8 @@ const styles = {
 storiesOf('Box', module)
   .add('<Box />', () => (
     <div>
-      <Flex p={1}>
-        <h1>Box Component</h1>
+      <Flex p={1} column>
+        <h1>Box</h1>
         <Divider />
       </Flex>
       <Flex colum p={1}>

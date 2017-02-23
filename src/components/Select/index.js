@@ -34,7 +34,8 @@ const Select = ({ label, noLabel, options, message, success, error, name, ...res
     <StyledSelectBox {...rest} name={name} success={success} error={error}>
       {options.map((option, id) => <option value={option.value} key={id}>{option.label}</option>)}
     </StyledSelectBox>
-    {message && <Text sm color={error ? 'error' : success ? 'success' : 'black'}>{message}</Text>}
+    {!error && message && <Text sm color={success ? 'success' : 'black'}>{message}</Text>}
+    {error && <Text sm color='error'>{error}</Text>}
   </Flex>
 )
 
@@ -44,7 +45,7 @@ Select.propTypes = {
   noLabel: React.PropTypes.bool,
   success: React.PropTypes.bool,
   message: React.PropTypes.string,
-  error: React.PropTypes.object,
+  error: React.PropTypes.string,
   name: React.PropTypes.string
 }
 

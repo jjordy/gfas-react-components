@@ -12,7 +12,7 @@ storiesOf('Divider', module)
   ))
   .add('<Divider borderWidth={4} />', () => (
     <Flex column>
-      <h1>Set Your own width</h1>
+      <h1>Set Your own border width</h1>
       <Divider borderWidth={4}/>
     </Flex>
   ))
