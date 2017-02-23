@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Base from '../Base'
 import Flex from '../Layout/Flex'
-import NavItem from '../NavItem'
 import Button from '../Button'
 import Fixed from '../Fixed'
 
@@ -22,7 +21,7 @@ export default class Dropdown extends React.Component {
     super(props)
     this.toggleOpen = this.toggleOpen.bind(this)
     this.close = this.close.bind(this)
-    this.state = { open: true }
+    this.state = { open: false }
   }
 
   toggleOpen () {
