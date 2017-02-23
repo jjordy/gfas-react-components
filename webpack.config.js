@@ -4,7 +4,7 @@ const isDev = process.env.NODE_ENV === 'development'
 module.exports = {
   devtool: isDev ? 'eval' : false,
   resolve: {
-    modules: [path.resolve(__dirname, 'modules'), 'node_modules']
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   module: {
     loaders: [{

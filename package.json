@@ -4,7 +4,7 @@
   "description": "Client side boilerplate",
   "main": "./lib/components/index.js",
   "scripts": {
-    "build": "NODE_ENV=production && rimraf lib && mkdirp lib && babel ./modules/ -d . --ignore __tests__ --out-dir lib",
+    "build": "NODE_ENV=production && rimraf lib && mkdirp lib && babel ./src/ -d . --ignore __tests__ --out-dir lib",
     "dev": "npm run storybook",
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
