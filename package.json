@@ -1,11 +1,10 @@
 {
   "name": "gfas-react-components",
-  "version": "3.0.5",
+  "version": "3.0.4",
   "description": "Client side boilerplate",
   "main": "./lib/components/index.js",
-  "module": "./lib/components/index.js",
   "scripts": {
-    "build": "better-npm-run build",
+    "build": "NODE_ENV=production && rimraf lib && mkdirp lib && babel ./modules/ -d . --ignore __tests__ --out-dir lib",
     "dev": "npm run storybook",
     "lint": "eslint src test",
     "lint:fix": "eslint src test --fix",
@@ -16,12 +15,6 @@
     "prepublish": "npm run build"
   },
   "betterScripts": {
-    "build": {
-      "command": "rimraf lib && mkdirp lib && babel ./src/ -d . --ignore __tests__ --out-dir lib",
-      "env": {
-        "NODE_ENV": "production"
-      }
-    },
     "dev": {
       "command": "node ./server",
       "env": {
