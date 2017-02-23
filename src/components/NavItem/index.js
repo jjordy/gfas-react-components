@@ -18,7 +18,8 @@ const NavItem = ({is, ...rest}) => {
 
 NavItem.propTypes = {
   is: React.PropTypes.string.isRequired,
-  theme: React.PropTypes.object
+  theme: React.PropTypes.object,
+  p: React.PropTypes.number
 }
 
 NavItem.defaultProps = {

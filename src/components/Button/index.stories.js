@@ -1,12 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import Button from './index'
-import { Space, Flex, Divider } from 'components'
+import { Space, Flex, Divider, Heading } from 'components'
 
 storiesOf('Button', module)
   .add('<Button />', () => (
     <Flex column>
-      <h1>Button</h1>
+      <Heading level={1}>Button</Heading>
       <Divider />
       <Flex>
         <Button>Default</Button>
