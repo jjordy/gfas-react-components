@@ -4,6 +4,7 @@ import Base from '../Base'
 import Label from '../Label'
 import Flex from '../Layout/Flex'
 import Text from '../Text'
+import Glyph from '../Glyph'
 
 const StyledSelectBox = styled(Base('select'))`
   height: 34px;
@@ -33,6 +34,7 @@ const Select = ({ label, noLabel, options, message, success, error, name, ...res
     <StyledSelectBox {...rest} name={name} success={success} error={error}>
       {options.map((option, id) => <option value={option.value} key={id}>{option.label}</option>)}
     </StyledSelectBox>
+    <Glyph xs color='black' icon='chevron-down' style={{marginLeft: -30, zIndex: 999}} />
     {!error && message && <Text sm color={success ? 'success' : 'black'}>{message}</Text>}
     {error && <Text sm color='error'>{error}</Text>}
   </Flex>
