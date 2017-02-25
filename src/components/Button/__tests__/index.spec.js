@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Button from '../'
-import theme from 'theme'
+import theme from '../../../theme'
 
 describe('<Button /> Component', () => {
   let wrapper

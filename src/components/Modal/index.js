@@ -6,6 +6,7 @@ import Flex from '../Layout/Flex'
 import Space from '../Layout/Space'
 import Button from '../Button'
 import Text from '../Text'
+import Glyph from '../Glyph'
 
 const StyledOverlay = styled(Base('div'))`
   top: 0;
@@ -20,15 +21,21 @@ const StyledOverlay = styled(Base('div'))`
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
 `
-const Modal = ({open, onToggle, bgColor, title, children, ...rest}) => (
+const Modal = ({open, onToggle, bgColor, width, title, children, ...rest}) => (
   <div>
     {open ? <StyledOverlay {...rest}>
-      <Panel style={{maxWidth: '25%', border: 0}}>
+      <Panel style={{border: 0, maxWidth: width}}>
         <PanelHeader bgColor={bgColor}>
           <Flex>
             <Text mb={0}>{title}</Text>
             <Space auto/>
-            <Button bgColor='transparent' borderRadius={99}><i>&#10005;</i></Button>
+            <Button
+              bgColor='transparent'
+              onClick={onToggle}
+              borderRadius={99}
+              style={{height: 36, width: 36}}>
+              <Glyph xs icon='close' />  
+            </Button>
           </Flex>
         </PanelHeader>
         <Flex p={1}>{children}</Flex>

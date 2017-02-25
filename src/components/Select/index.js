@@ -31,10 +31,12 @@ const Select = ({ label, noLabel, options, message, success, error, name, ...res
       noLabel={noLabel}
       success={success}
       error={error}>{label}</Label>
-    <StyledSelectBox {...rest} name={name} success={success} error={error}>
-      {options.map((option, id) => <option value={option.value} key={id}>{option.label}</option>)}
-    </StyledSelectBox>
-    <Glyph xs color='black' icon='chevron-down' style={{marginLeft: -30, zIndex: 999}} />
+    <Flex align='center'>
+      <StyledSelectBox {...rest} name={name} success={success} error={error}>
+        {options.map((option, id) => <option value={option.value} key={id}>{option.label}</option>)}
+      </StyledSelectBox>
+      <Glyph xs color='black' icon='chevron-down' style={{marginLeft: -20, fontWeight: 100}} />
+    </Flex>
     {!error && message && <Text sm color={success ? 'success' : 'black'}>{message}</Text>}
     {error && <Text sm color='error'>{error}</Text>}
   </Flex>

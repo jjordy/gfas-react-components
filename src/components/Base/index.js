@@ -14,7 +14,7 @@ const calcBorderRadius = (props, position) => {
 }
 
 
-const Base = (tagname = 'div') => styled[tagname]`
+const Base = (tagname = 'div') => styled(tagname)`
   box-sizing: border-box;
   font-family: ${props => props.theme.fontFamily ? props.theme.fontFamily : 'inherit'}
   color: ${props => props.color ? props.theme.colors[props.color] : 'inherit'}

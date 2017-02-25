@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Base from '../'
-import theme from 'theme'
+import theme from '../../../theme'
 
 let Component = Base('div')
 

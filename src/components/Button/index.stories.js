@@ -26,19 +26,23 @@ storiesOf('Button', module)
     </Flex>
   ))
   .add('<Button lg />', () => (
-    <Flex>
-      <Button lg>Default</Button>
-      <Space />
-      <Button bgColor='primary' lg>Primary</Button>
-      <Space />
-      <Button bgColor='secondary' lg>Secondary</Button>
-      <Space />
-      <Button bgColor='info' lg>Info</Button>
-      <Space />
-      <Button bgColor='success' lg>Success</Button>
-      <Space />
-      <Button bgColor='warning' lg>Warning</Button>
-      <Space />
-      <Button bgColor='error' lg>Error</Button>
+    <Flex column>
+      <Heading level={1}>Button Large</Heading>
+      <Divider />
+      <Flex>
+        <Button lg>Default</Button>
+        <Space />
+        <Button bgColor='primary' lg>Primary</Button>
+        <Space />
+        <Button bgColor='secondary' lg>Secondary</Button>
+        <Space />
+        <Button bgColor='info' lg>Info</Button>
+        <Space />
+        <Button bgColor='success' lg>Success</Button>
+        <Space />
+        <Button bgColor='warning' lg>Warning</Button>
+        <Space />
+        <Button bgColor='error' lg>Error</Button>
+      </Flex>
     </Flex>
   ))

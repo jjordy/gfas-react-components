@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { animations } from '../../theme'
 import Base from '../Base'
+import React from 'react'
 
 const FadeInButton = styled(Base('button'))`
     padding-left: ${props => props.lg ? props.theme.padding[3] : props.theme.padding[2]}px
@@ -28,4 +29,8 @@ FadeInButton.defaultProps = {
   rounded: true
 }
 
-export default FadeInButton
+const Button = ({...rest}) => (
+  <FadeInButton {...rest} />
+)
+
+export default Button
