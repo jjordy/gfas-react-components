@@ -39,7 +39,7 @@ const StyledRadio = styled(Base('input'))`
       top: 1px;
       padding-top:1px;
       margin-left: -1px;
-      left: 4.2px;
+      left: 4.0px;
       color: #FFF;
     }
   }

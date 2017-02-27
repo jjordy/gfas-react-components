@@ -41,6 +41,26 @@ const rotate = keyframes`
   }
 `
 
+const color_change = keyframes`
+  from { background-color: blue; }
+  to { background-color: red; }
+}
+`
+
+const newPulse = keyframes`
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+`
+
 const shake = keyframes`
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -78,7 +98,9 @@ export const animations = {
   fadeIn,
   shake,
   rotate,
-  pulse
+  pulse,
+  color_change,
+  newPulse
 }
 
 export default theme
