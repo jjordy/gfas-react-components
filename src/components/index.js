@@ -1,4 +1,6 @@
 export {Accordion, AccordionHeading, AccordionItem} from './Accordion'
+export {default as AFK} from './AFK'
+export {default as Await} from './Await'
 export {default as Base} from './Base/'
 export {default as Box} from './Layout/Box/'
 export {default as Button} from './Button/'
