@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Base from '../Base'
 
-
 const NavItem = ({is, ...rest}) => {
   const Component = styled(Base(is)) `
     font-size: ${props => props.lg ? 1.3 : props.sm ? 0.9 : 1.2}rem;

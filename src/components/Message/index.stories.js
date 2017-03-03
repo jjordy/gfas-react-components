@@ -18,7 +18,7 @@ storiesOf('Message', module)
         <Message bgColor='warning' mb={1}>
           <Text mb={0} color='white'>Warning Style alert</Text>
         </Message>
-        <Message bgColor='error' onClose={ action('on-close')}>
+        <Message bgColor='error' onClose={action('on-close')}>
           <Text mb={0} color='white'>Error Style alert</Text>
         </Message>
       </Flex>

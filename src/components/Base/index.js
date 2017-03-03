@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 const calcBorderRadius = (props, position) => {
   if (props.borderRadius) {
     return props.borderRadius
@@ -14,7 +13,6 @@ const calcBorderRadius = (props, position) => {
     return 0
   }
 }
-
 
 const Base = (tagname = 'div') => styled(tagname)`
   box-sizing: border-box;

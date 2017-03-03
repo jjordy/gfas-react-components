@@ -14,5 +14,4 @@ const Fixed = ({...rest}) => (
   <StyledFixed {...rest} />
 )
 
-
 export default Fixed

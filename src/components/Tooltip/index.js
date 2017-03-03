@@ -2,7 +2,7 @@ import React from 'react'
 import ToolTipContent from './TooltipContainer'
 import styled from 'styled-components'
 
-let tooltipIdCounter = 0;
+let tooltipIdCounter = 0
 
 class ReactARIAToolTip extends React.Component {
   constructor (props, context) {

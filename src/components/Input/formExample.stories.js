@@ -25,19 +25,19 @@ storiesOf('Form Examples', module)
           <Checkbox
             auto
             name='1year'
-            message='Sign up for a whole year and save save 25% vs paying per month this is a great discount for people who already love the service'
+            message='Sign up for a whole year'
             label='Bill me once a year' />
         </Flex>
         <Flex p={1}>
           <Switch
             auto
-            message='Sign up for 5 years and save save 45% vs paying per month this is a great discount for people who already love the service'
+            message='Sign up for 5 years'
             label='Bill me once every 5 years' />
         </Flex>
         <Flex p={1}>
           <Space auto/>
           <Button children='Submit' />
         </Flex>
-      </Panel>     
+      </Panel>
     </Flex>
   ))

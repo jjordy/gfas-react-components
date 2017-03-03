@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import Modal from '../Modal'
-import Heading from '../Heading'
 import Button from '../Button'
 import Text from '../Text'
 import Space from '../Layout/Space'
@@ -68,7 +67,7 @@ export default class Afk extends Component {
   render () {
     return (
       <div className='afk-container'>
-        <Modal width={300}open={this.state.isAfk} title='It Seems your away'>
+        <Modal width={300} open={this.state.isAfk} title='It Seems your away'>
           <Flex column>
             <Flex p={1} justify='center' align='center'>
               <Text>Logging you out in 30 seconds...</Text>

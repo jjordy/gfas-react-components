@@ -16,6 +16,7 @@ const ToolTipContent = ({ className, direction, message, active, bgColor, ...res
 ToolTipContent.displayName = 'ToolTipContent'
 
 ToolTipContent.propTypes = {
+  className: React.PropTypes.string,
   message: React.PropTypes.string.isRequired,
   direction: React.PropTypes.string.isRequired,
   active: React.PropTypes.bool.isRequired,

@@ -34,7 +34,7 @@ const Modal = ({open, onToggle, bgColor, width, title, children, ...rest}) => (
               onClick={onToggle}
               borderRadius={99}
               style={{height: 36, width: 36}}>
-              <Glyph xs icon='close' />  
+              <Glyph xs icon='close' />
             </Button>
           </Flex>
         </PanelHeader>
@@ -46,15 +46,17 @@ const Modal = ({open, onToggle, bgColor, width, title, children, ...rest}) => (
 
 Modal.propTypes = {
   open: React.PropTypes.bool.isRequired,
-  onToggle: React.PropTypes.func.isRequired,
+  onToggle: React.PropTypes.func,
   bgColor: React.PropTypes.string,
   title: React.PropTypes.string,
-  children: React.PropTypes.node
+  children: React.PropTypes.node,
+  width: React.PropTypes.number
 }
 
 Modal.defaultProps = {
   bgColor: 'primary',
-  title: 'Modal'
+  title: 'Modal',
+  onToggle: () => {}
 }
 
 export default Modal

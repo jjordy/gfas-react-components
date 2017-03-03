@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import Toolbar from './index'
-import { Space, Text, Fixed, NavItem } from 'components'
+import { Space, Fixed, NavItem } from 'components'
 
 storiesOf('Toolbar', module)
   .add('Fixed', () => (

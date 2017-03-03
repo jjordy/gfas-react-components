@@ -3,7 +3,6 @@ import { storiesOf } from '@kadira/storybook'
 import Modal from './index'
 import { Flex, Button } from 'components'
 
-
 class ModalExample extends React.Component {
   constructor (props) {
     super(props)
@@ -24,7 +23,7 @@ class ModalExample extends React.Component {
         <Flex>
           <Button onClick={this.handleToggleModal}>Open Me</Button>
         </Flex>
-        
+
         <Modal open={open} width={600} onToggle={this.handleToggleModal}>
           <Flex column auto p={3} justify='center' align='center'>
             <img src='http://i.imgur.com/4AiXzf8.jpg' />

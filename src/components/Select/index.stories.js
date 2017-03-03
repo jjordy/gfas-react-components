@@ -13,7 +13,7 @@ const longListOfOptions = [
   {value: 'Hello', label: 'Hello 7'},
   {value: 'Hello', label: 'Hello 8'},
   {value: 'Hello', label: 'Hello 9'},
-  {value: 'Hello', label: 'Hello 10'},
+  {value: 'Hello', label: 'Hello 10'}
 ]
 
 storiesOf('Select', module)

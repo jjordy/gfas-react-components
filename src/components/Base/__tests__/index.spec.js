@@ -8,7 +8,7 @@ let Component = Base('div')
 describe('<Base /> Component', () => {
   let wrapper
   let props = {
-      theme: theme
+    theme: theme
   }
 
   beforeEach(() => {

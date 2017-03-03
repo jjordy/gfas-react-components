@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Base from '../Base'
 import { animations } from '../../theme'
 
-
 const Dot = styled(Base('div'))`
   background-color: ${props => props.theme.colors.success}
   height:12px;
@@ -13,7 +12,6 @@ const Dot = styled(Base('div'))`
   margin-right: 2px;
   animation: 400ms ${animations.pulse} ease-in;
 `
-
 
 class Loading extends React.Component {
   constructor (props) {
@@ -47,6 +45,7 @@ class Loading extends React.Component {
       <Flex
         column
         align='center'
+        className='loading'
         justify='center'
         style={{
           width: '100%',

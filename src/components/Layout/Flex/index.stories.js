@@ -35,7 +35,7 @@ storiesOf('Flex', module)
       <h1>Flex with auto width</h1>
       <Flex bgColor='success' p={1}>
         <Flex auto>
-        <p>Flex auto</p>
+          <p>Flex auto</p>
         </Flex>
         <p>Next Item</p>
       </Flex>

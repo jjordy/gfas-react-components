@@ -38,5 +38,6 @@ AccordionItemTitle.propTypes = {
   onClick: PropTypes.func,
   title: PropTypes.node,
   uuid: PropTypes.string,
-  titleColor: PropTypes.string
+  titleColor: PropTypes.string,
+  subTitle: PropTypes.string
 }

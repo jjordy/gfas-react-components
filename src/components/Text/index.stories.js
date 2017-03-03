@@ -4,10 +4,10 @@ import Text from './index'
 import { Flex, Divider } from 'components'
 
 const RenderLongText = ({...rest}) => (
-    <Flex column p={3}>
-      <h1>Flow Text</h1>
-      <Divider />
-      <Text {...rest}>
+  <Flex column p={3}>
+    <h1>Flow Text</h1>
+    <Divider />
+    <Text {...rest}>
         Bacon ipsum dolor amet jerky frankfurter venison,
         landjaeger jowl burgdoggen meatball flank brisket t-bone.
         Kielbasa alcatra ground round fatback boudin ribeye.
@@ -16,7 +16,7 @@ const RenderLongText = ({...rest}) => (
         Kielbasa alcatra bacon filet mignon.
         Pancetta ground round pork loin prosciutto.
       </Text>
-      <Text{...rest}>
+    <Text{...rest}>
         Cupim jerky beef ribs turducken, rump
         boudin ham hock cow chicken shank pork
         loin pork belly short ribs pancetta.
@@ -24,7 +24,7 @@ const RenderLongText = ({...rest}) => (
         Strip steak turkey picanha rump, kevin t-bone tail spare ribs
         swine filet mignon pig sirloin. Salami pork belly shoulder landjaeger.
       </Text>
-      <Text {...rest}>
+    <Text {...rest}>
         Prosciutto shank ham, bacon burgdoggen capicola boudin picanha
         biltong. Turducken jowl meatball jerky. Pork boudin sirloin,
         fatback porchetta jerky turducken tail frankfurter.
@@ -33,14 +33,14 @@ const RenderLongText = ({...rest}) => (
         Ball tip tenderloin cupim corned beef burgdoggen short loin,
         kevin alcatra venison filet mignon strip steak ribeye beef drumstick.
       </Text>
-      <Text {...rest}>
+    <Text {...rest}>
         Venison meatball meatloaf ball tip ham hock chicken.
         Meatball cupim frankfurter pastrami fatback bacon.
         Ham alcatra sausage fatback burgdoggen rump. Beef ribeye alcatra,
         tri-tip cow pancetta pig short loin kevin turducken leberkas.
         Shankle kielbasa boudin porchetta ham hock brisket.
       </Text>
-      <Text {...rest}>
+    <Text {...rest}>
         Cupim porchetta shank, fatback filet mignon rump beef ribs ribeye.
         Ribeye beef tri-tip landjaeger cupim venison boudin pork belly.
         Hamburger rump pig meatball beef biltong tongue pancetta
@@ -49,7 +49,7 @@ const RenderLongText = ({...rest}) => (
         Bacon alcatra ball tip cow short loin porchetta ribeye,
         sausage filet mignon shankle kielbasa pig.
       </Text>
-    </Flex>
+  </Flex>
 )
 
 storiesOf('Text', module)

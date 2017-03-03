@@ -3,7 +3,6 @@ import { storiesOf } from '@kadira/storybook'
 import Await from './index'
 import { Flex, Divider, Heading, Text } from 'components'
 
-
 class AwaitExample extends React.Component {
   constructor (props) {
     super(props)
@@ -27,6 +26,10 @@ class AwaitExample extends React.Component {
       </Await>
     )
   }
+}
+
+AwaitExample.propTypes = {
+  display: React.PropTypes.bool
 }
 
 storiesOf('Await', module)

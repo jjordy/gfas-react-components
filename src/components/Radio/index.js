@@ -58,4 +58,10 @@ const Radio = ({label, name, message, ...rest}) => (
   </Flex>
 )
 
+Radio.propTypes = {
+  label: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string.isRequired,
+  message: React.PropTypes.string
+}
+
 export default Radio

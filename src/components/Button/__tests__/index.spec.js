@@ -6,7 +6,7 @@ import theme from '../../../theme'
 describe('<Button /> Component', () => {
   let wrapper
   let props = {
-      theme: theme
+    theme: theme
   }
   beforeEach(() => {
     wrapper = shallow(<Button children='Hello' lg {...props} />)
