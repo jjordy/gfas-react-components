@@ -13,9 +13,13 @@ class AwaitExample extends React.Component {
   }
 
   componentDidMount () {
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       this.setState({data: {dkey: 'Im Async'}, loading: false})
     }, 5000)
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.timer)
   }
   render () {
     return (

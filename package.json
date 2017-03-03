@@ -2,8 +2,8 @@
   "name": "gfas-react-components",
   "version": "3.0.13",
   "description": "Client side boilerplate",
-  "main": "./lib/components/index.js",
-  "module": "./lib/components/index.js",
+  "main": "./lib/components",
+  "module": "./lib/components",
   "scripts": {
     "build": "better-npm-run build",
     "dev": "npm run storybook",

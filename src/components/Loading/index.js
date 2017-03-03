@@ -31,12 +31,12 @@ class Loading extends React.Component {
     }
   }
 
-  setupLoader () {
+  componentDidMount () {
     this.intervalLoader = setInterval(() => this.handleLoaderDisplay(), 500)
   }
 
-  componentDidMount () {
-    this.intervalLoader = this.setupLoader()
+  componentWillUnmount () {
+    clearTimeout(this.intervalLoader)
   }
   render () {
     const { dots } = this.state

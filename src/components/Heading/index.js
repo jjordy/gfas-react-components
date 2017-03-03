@@ -4,7 +4,7 @@ import Base from '../Base'
 
 const Heading = ({level, big, ...rest}) => {
   const Component = styled(Base(`h${level}`))`
-    font-weight: ${props => props.strong ? 600 : 300};
+    font-weight: ${props => props.strong ? 600 : 400};
     font-size: ${props => big ? props.theme.sizes[level - 1] * 2 : props.theme.sizes[level - 1]}px;` // eslint-disable-line
   return (
     <Component {...rest} />
