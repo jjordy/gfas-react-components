@@ -1,5 +1,5 @@
 import React from 'react'
-import Flex from '../Layout/Flex'
+import Flex from '../Flex'
 import styled from 'styled-components'
 import Base from '../Base'
 import { animations } from '../../theme'

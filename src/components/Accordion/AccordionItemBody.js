@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import className from 'classnames'
 import Base from '../Base'
 import styled from 'styled-components'
-import Flex from '../Layout/Flex'
+import Flex from '../Flex'
 
 const ItemBody = styled(Base('div')) `
   border: ${props => props.theme.borderWidth}px solid ${props => props.theme.colors.lightgray}

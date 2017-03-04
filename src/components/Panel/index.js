@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Base from '../Base'
 import { animations } from '../../theme'
+
 export const Panel = styled(Base('div'))`
   display: flex
   border-radius: ${props => props.theme.borderRadius}px;

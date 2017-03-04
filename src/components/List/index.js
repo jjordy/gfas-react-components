@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import Heading from '../Heading'
-import Divider from '../Layout/Divider'
-import Flex from '../Layout/Flex'
+import Divider from '../Divider'
+import Flex from '../Flex'
 import Text from '../Text'
 
 export const List = (props) => {

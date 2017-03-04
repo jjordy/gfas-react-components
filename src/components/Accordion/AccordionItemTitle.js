@@ -3,8 +3,8 @@ import className from 'classnames'
 import styled from 'styled-components'
 import Base from '../Base'
 import Heading from '../Heading'
-import Flex from '../Layout/Flex'
-import Space from '../Layout/Space'
+import Flex from '../Flex'
+import Space from '../Space'
 import Glyph from '../Glyph'
 
 const ItemTitle = styled(Base('div'))`

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Base from '../../Base'
+import Base from '../Base'
 
 const calcWidth = (col, total = 12) => {
   return col / 12 * 100

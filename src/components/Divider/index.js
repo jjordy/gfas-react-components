@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Base from '../../Base'
+import Base from '../Base'
 
 const Divider = styled(Base('div'))`
   border: 0;

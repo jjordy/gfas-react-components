@@ -8,8 +8,4 @@ const Text = styled(Base('p'))`
   line-height: 1.58;
 `
 
-Text.defaultProps = {
-  mb: 2
-}
-
 export default Text

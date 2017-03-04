@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Base from '../../Base'
+import Base from '../Base'
 
 const Space = styled(Base('div'))`
   display: flex;

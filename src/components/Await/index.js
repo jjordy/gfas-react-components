@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import Flex from '../Layout/Flex'
+import Flex from '../Flex'
 import Loading from '../Loading'
 
 const AsyncComponent = ({data, evaluate, children, showLoader, loading, noData}) => (

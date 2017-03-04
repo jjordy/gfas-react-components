@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Base from '../Base'
 import Label from '../Label'
-import Flex from '../Layout/Flex'
+import Flex from '../Flex'
 import Text from '../Text'
 import Glyph from '../Glyph'
 

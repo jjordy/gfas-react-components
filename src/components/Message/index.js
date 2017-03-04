@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Base from '../Base'
-import Flex from '../Layout/Flex'
-import Space from '../Layout/Space'
+import Flex from '../Flex'
+import Space from '../Space'
 import Button from '../Button'
 import Glyph from '../Glyph'
 

@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import Modal from '../Modal'
 import Button from '../Button'
 import Text from '../Text'
-import Space from '../Layout/Space'
-import Flex from '../Layout/Flex'
+import Space from '../Space'
+import Flex from '../Flex'
 
 export default class Afk extends Component {
   constructor (props) {
