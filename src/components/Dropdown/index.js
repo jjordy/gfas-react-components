@@ -16,7 +16,7 @@ const StyledDropdown = styled(Base('div'))`
   background-color: #FFF;
   position: absolute;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  width: 100%;
+  min-width: 100px;
 `
 
 export default class Dropdown extends React.Component {
@@ -36,7 +36,7 @@ export default class Dropdown extends React.Component {
   }
 
   render () {
-    const { children, title, ...rest } = this.props
+    const { children, title, hideIcon, left, right, ...rest } = this.props
     const { open } = this.state
     return (
       <div>
@@ -47,12 +47,12 @@ export default class Dropdown extends React.Component {
               onClick={this.toggleOpen}>
               <Flex align='center'>
                 {title}
-                <Space />
-                <Glyph xs icon='chevron-down' fixed />
+
+                {!hideIcon && <span><Space /><Glyph xs icon='chevron-down' fixed /></span>}
               </Flex>
             </Button>
           </Flex>
-          {open && <StyledDropdown>
+          {open && <StyledDropdown style={{left: left ? 0 : null, right: right ? 0 : null}}>
             <Flex column p={1}>
               {children}
             </Flex>
@@ -75,7 +75,12 @@ export default class Dropdown extends React.Component {
   }
 }
 
+Dropdown.defaultProps = {
+  hideIcon: false
+}
+
 Dropdown.propTypes = {
+  hideIcon: React.PropTypes.bool,
   children: React.PropTypes.node.isRequired,
   title: React.PropTypes.string.isRequired
 }

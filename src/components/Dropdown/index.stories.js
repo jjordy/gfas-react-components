@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import Dropdown from './index'
-import { Flex, NavItem, Divider, Space, Heading } from 'components'
+import { Flex, NavItem, Divider, Space, Heading, Button } from 'components'
 
 storiesOf('Dropdown', module)
   .add('<Dropdown />', () => (
@@ -15,10 +15,13 @@ storiesOf('Dropdown', module)
           <NavItem is='a' href=''>Hello</NavItem>
           <NavItem is='a' href=''>Test</NavItem>
         </Dropdown>
-        <Space />
-        <Dropdown title='Something Else' bgColor='success'>
-          <NavItem is='a' href=''>Hello</NavItem>
-          <NavItem is='a' href=''>Test</NavItem>
+        <Space auto/>
+        <Dropdown title='JA' right circle hideIcon bgColor='success'>
+          <Flex align='center'>
+            <Button>Profile</Button>
+            <Space auto />
+            <Button>Logout</Button>
+          </Flex>
         </Dropdown>
       </Flex>
     </Flex>

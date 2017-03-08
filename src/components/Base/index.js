@@ -9,7 +9,6 @@ const calcBorderRadius = (props, position) => {
   } else if (typeof props.rounded === 'boolean' && props.rounded) {
     br = props.theme.borderRadius
   } else if (props.circle) {
-    console.log(props)
     br = 999
   } else {
     br = 0
