@@ -36,7 +36,7 @@ export default class Dropdown extends React.Component {
   }
 
   render () {
-    const { children, title, hideIcon, left, right, ...rest } = this.props
+    const { children, title, hideIcon, left, right, minWidth, ...rest } = this.props
     const { open } = this.state
     return (
       <div>
@@ -52,11 +52,17 @@ export default class Dropdown extends React.Component {
               </Flex>
             </Button>
           </Flex>
-          {open && <StyledDropdown style={{left: left ? 0 : null, right: right ? 0 : null}}>
-            <Flex column p={1}>
-              {children}
-            </Flex>
-          </StyledDropdown>}
+          {open &&
+            <StyledDropdown
+              style={{
+                left: left ? 0 : null,
+                right: right ? 0 : null,
+                minWidth: minWidth
+              }}>
+              <Flex column p={1}>
+                {children}
+              </Flex>
+            </StyledDropdown>}
         </DropdownContainer>
         {open &&
           <Fixed
@@ -76,10 +82,14 @@ export default class Dropdown extends React.Component {
 }
 
 Dropdown.defaultProps = {
-  hideIcon: false
+  hideIcon: false,
+  minWidth: 100
 }
 
 Dropdown.propTypes = {
+  left: React.PropTypes.bool,
+  right: React.PropTypes.bool,
+  minWidth: React.PropTypes.number,
   hideIcon: React.PropTypes.bool,
   children: React.PropTypes.node.isRequired,
   title: React.PropTypes.string.isRequired
