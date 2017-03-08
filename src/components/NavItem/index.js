@@ -16,7 +16,10 @@ const NavItem = ({is, ...rest}) => {
 }
 
 NavItem.propTypes = {
-  is: React.PropTypes.string.isRequired,
+  is: React.PropTypes.oneOfType([
+    React.PropTypes.string.isRequired,
+    React.PropTypes.func.isRequired
+  ]),
   theme: React.PropTypes.object,
   p: React.PropTypes.number
 }

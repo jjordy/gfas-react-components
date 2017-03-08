@@ -1,17 +1,20 @@
 import styled from 'styled-components'
 
 const calcBorderRadius = (props, position) => {
+  let br
   if (props.borderRadius) {
-    return props.borderRadius
+    br = props.borderRadius
   } else if (props.rounded && position.includes(props.rounded)) {
-    return props.theme.borderRadius
+    br = props.theme.borderRadius
   } else if (typeof props.rounded === 'boolean' && props.rounded) {
-    return props.theme.borderRadius
+    br = props.theme.borderRadius
   } else if (props.circle) {
-    return 999
+    console.log(props)
+    br = 999
   } else {
-    return 0
+    br = 0
   }
+  return br
 }
 
 const Base = (tagname = 'div') => styled(tagname)`

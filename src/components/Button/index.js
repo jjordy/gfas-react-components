@@ -10,6 +10,7 @@ const FadeInButton = styled(Base('button'))`
     padding-bottom: ${props => props.lg ? props.theme.padding[2] : props.theme.padding[1]}px
     font-size: ${props => props.lg ? (props.theme.sizes[3] - 4) : props.theme.sizes[4]}px
     font-weight: 600;
+    border-radius: ${props => props.circle ? 99 : null}px;
     color: ${props => props.color ? props.theme.colors[props.color] : props.theme.colors.white}
     background-color: ${props => props.bgColor ? props.theme.colors[props.bgColor] : props.theme.colors.default}
     border: 0;
