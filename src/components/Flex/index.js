@@ -7,6 +7,7 @@ const Flex = styled(Base())`
   justify-content: ${props => props.justify ? props.justify : 'flex-start'}
   align-items: ${props => props.align ? props.align : 'flex-start'}
   align-content: flex-start;
+  height: ${props => props.height}vh;
   flex-wrap: ${props => props.wrap ? 'wrap' : 'no-wrap'}
   flex-direction: ${props => props.column ? 'column' : 'row'}
   flex: ${props => props.auto ? '1 1 auto' : null}

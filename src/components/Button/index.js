@@ -39,7 +39,10 @@ const makeButtonStyles = (is = 'button') => {
 }
 
 Button.propTypes = {
-  is: React.PropTypes.string
+  is: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.func
+  ])
 }
 
 Button.defaultProps = {

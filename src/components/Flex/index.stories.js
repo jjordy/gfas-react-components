@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 import Flex from '../Flex'
-import { Text } from 'components'
+import { Text, Heading } from 'components'
 
 storiesOf('Flex', module)
   .add('<Flex />', () => (
@@ -39,5 +39,10 @@ storiesOf('Flex', module)
         </Flex>
         <p>Next Item</p>
       </Flex>
+    </Flex>
+  ))
+  .add('Vertically Center Something', () => (
+    <Flex height={100} justify='center' align='center' bgColor='info'>
+      <Heading color='white'>Vertically Centered</Heading>
     </Flex>
   ))
