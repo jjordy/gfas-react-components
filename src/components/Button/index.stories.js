@@ -19,7 +19,7 @@ storiesOf('Button', module)
         <Space />
         <Button bgColor='success'>Success</Button>
         <Space />
-        <Button bgColor='warning'>Warning</Button>
+        <Button bgColor='warning' is='a' href='/'>Button as anchor</Button>
         <Space />
         <Button circle bgColor='error'>E</Button>
       </Flex>
