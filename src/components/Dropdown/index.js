@@ -6,6 +6,7 @@ import Button from '../Button'
 import Fixed from '../Fixed'
 import Space from '../Space'
 import Glyph from '../Glyph'
+import Text from '../Text'
 
 const DropdownContainer = styled(Base('div'))`
   position: relative;
@@ -36,7 +37,7 @@ export default class Dropdown extends React.Component {
   }
 
   render () {
-    const { children, title, hideIcon, left, right, minWidth, ...rest } = this.props
+    const { children, title, hideIcon, left, right, minWidth, titleOpts, ...rest } = this.props
     const { open } = this.state
     return (
       <div>
@@ -46,8 +47,7 @@ export default class Dropdown extends React.Component {
               bgColor='transparent'
               onClick={this.toggleOpen}>
               <Flex align='center'>
-                {title}
-
+                <Text {...titleOpts}>{title}</Text>
                 {!hideIcon && <span><Space /><Glyph xs icon='chevron-down' fixed /></span>}
               </Flex>
             </Button>
@@ -92,5 +92,6 @@ Dropdown.propTypes = {
   minWidth: React.PropTypes.number,
   hideIcon: React.PropTypes.bool,
   children: React.PropTypes.node.isRequired,
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string.isRequired,
+  titleOpts: React.PropTypes.object
 }
