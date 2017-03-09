@@ -1,6 +1,6 @@
 {
   "name": "gfas-react-components",
-  "version": "3.0.20",
+  "version": "3.0.21",
   "description": "Client side boilerplate",
   "main": "./lib/components",
   "module": "./lib/components",
