@@ -3,7 +3,7 @@ import Flex from '../Flex'
 import Loading from '../Loading'
 
 const AsyncComponent = ({data, evaluate, children, showLoader, loading, noData}) => (
-  <Flex className='await' auto>
+  <Flex className='await' auto column>
     {!loading && data && evaluate() && children(data)}
     {showLoader && loading && evaluate() && <Loading bgColor='warning'/>}
     {!loading && !data && <Flex align='center' justify='center'>
