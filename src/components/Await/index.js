@@ -3,13 +3,13 @@ import Flex from '../Flex'
 import Loading from '../Loading'
 
 const AsyncComponent = ({data, evaluate, children, showLoader, loading, noData}) => (
-  <div className='await'>
+  <Flex className='await' auto>
     {!loading && data && evaluate() && children(data)}
     {showLoader && loading && evaluate() && <Loading bgColor='warning'/>}
     {!loading && !data && <Flex align='center' justify='center'>
       {noData}
     </Flex>}
-  </div>
+  </Flex>
 )
 
 AsyncComponent.propTypes = {

@@ -92,6 +92,10 @@ Dropdown.propTypes = {
   minWidth: React.PropTypes.number,
   hideIcon: React.PropTypes.bool,
   children: React.PropTypes.node.isRequired,
-  title: React.PropTypes.string.isRequired,
+  title: React.PropTypes.oneOfType([
+    React.PropTypes.string.isRequired,
+    React.PropTypes.object.isRequired,
+    React.PropTypes.func.isRequired
+  ]),
   titleOpts: React.PropTypes.object
 }
