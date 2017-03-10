@@ -44,6 +44,7 @@ class ReactARIAToolTip extends React.Component {
   }
 
   handleMouseLeave () {
+    console.log('Mouse Left')
     this.setState({ active: false })
   }
 
@@ -75,7 +76,7 @@ class ReactARIAToolTip extends React.Component {
     if (this.props.eventType === 'hover') {
       return (
         <div
-          onMouseOver={this.handleMouseOver.bind(this)}
+          onMouseEnter={this.handleMouseOver.bind(this)}
           onMouseLeave={this.handleMouseLeave.bind(this)}
           role='tooltip'
           id={tooltipID}
