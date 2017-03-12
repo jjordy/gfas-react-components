@@ -1,8 +1,20 @@
 import React from 'react'
 import ToolTipContent from './TooltipContainer'
 import styled from 'styled-components'
+import Base from '../Base'
 
 let tooltipIdCounter = 0
+
+const TtContainer = styled.div`
+  display: inline-block;
+  position: relative;
+  width: auto;
+  &.active {
+    .ra-tooltip {
+        display: block;
+    }
+  }
+`
 
 class ReactARIAToolTip extends React.Component {
   constructor (props, context) {
@@ -44,7 +56,6 @@ class ReactARIAToolTip extends React.Component {
   }
 
   handleMouseLeave () {
-    console.log('Mouse Left')
     this.setState({ active: false })
   }
 
@@ -59,10 +70,9 @@ class ReactARIAToolTip extends React.Component {
 
   // adds tooltip 'aria-describedby' attribute to child element
   addDescribedBy (tooltipID) {
+    const props = Object.assign({}, this.props, {'aria-describedBy': tooltipID})
     return React.Children.map(this.props.children, (e) => {
-      return React.cloneElement(e, {
-        'aria-describedby': tooltipID
-      })
+      return React.cloneElement(e, props)
     })
   }
 
@@ -75,9 +85,10 @@ class ReactARIAToolTip extends React.Component {
 
     if (this.props.eventType === 'hover') {
       return (
-        <div
+        <TtContainer
           onMouseEnter={this.handleMouseOver.bind(this)}
           onMouseLeave={this.handleMouseLeave.bind(this)}
+          onClick={() => console.log('Clicked Div')}
           role='tooltip'
           id={tooltipID}
           onFocus={this.handleFocus.bind(this)}
@@ -89,25 +100,10 @@ class ReactARIAToolTip extends React.Component {
             bgcolor={bgcolor}
             direction={direction}
             active={active} />
-          {this.addDescribedBy(tooltipID)}
-        </div>
+          {this.props.children}
+        </TtContainer>
       )
     }
-
-    return (
-      <div
-        onClick={this.handleClick.bind(this)}
-        role='tooltip'
-        className={containerClass}
-      >
-        <ToolTipContent
-          message={message}
-          bgcolor={bgcolor}
-          direction={direction}
-          active={active} />
-        {this.addDescribedBy(tooltipID)}
-      </div>
-    )
   }
 }
 
@@ -134,13 +130,4 @@ ReactARIAToolTip.propTypes = {
   bgcolor: React.PropTypes.string
 }
 
-export default styled(ReactARIAToolTip) `
-  position: relative;
-  display: inline-block;
-  width: auto;
-  &.active {
-    .ra-tooltip {
-        display: block;
-    }
-  }
-`
+export default ReactARIAToolTip

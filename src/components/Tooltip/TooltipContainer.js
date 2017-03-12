@@ -13,6 +13,7 @@ const ToolTipContent = ({ className, direction, message, active, bgColor, ...res
     </div>
   )
 }
+
 ToolTipContent.displayName = 'ToolTipContent'
 
 ToolTipContent.propTypes = {
@@ -25,6 +26,7 @@ ToolTipContent.propTypes = {
 
 export default styled(Base(ToolTipContent)) `
     position: absolute;
+    pointer-events: none;
     background: ${props => props.theme.colors[props.bgColor]};
     transition: all .25s;
     display: none;
@@ -40,9 +42,9 @@ export default styled(Base(ToolTipContent)) `
       transform: translate(-50%,-120%);
       .ra-tooltip-message {
         &:after {
-            top: 100%;
-            left: 50%;
-            border-top-color: ${props => props.theme.colors[props.bgColor]};
+          top: 100%;
+          left: 50%;
+          border-top-color: ${props => props.theme.colors[props.bgColor]};
         }
       }
     }
@@ -52,9 +54,9 @@ export default styled(Base(ToolTipContent)) `
       transform: translate(-50%,120%);
       .ra-tooltip-message {
         &:after {
-            top: -${arrowSize * 2}px;
-            left: 50%;
-            border-bottom-color: ${props => props.theme.colors[props.bgColor]};
+          top: -${arrowSize * 2}px;
+          left: 50%;
+          border-bottom-color: ${props => props.theme.colors[props.bgColor]};
         }
       }
     }
@@ -64,11 +66,11 @@ export default styled(Base(ToolTipContent)) `
       transform: translate(-100%,-50%);
       .ra-tooltip-message {
         &:after {
-            top: 50%;
-            left: 100%;
-            margin-left: 0;
-            margin-top: -${arrowSize}px;
-            border-left-color: ${props => props.theme.colors[props.bgColor]};
+          top: 50%;
+          left: 100%;
+          margin-left: 0;
+          margin-top: -${arrowSize}px;
+          border-left-color: ${props => props.theme.colors[props.bgColor]};
         }
       }
     }
@@ -78,11 +80,11 @@ export default styled(Base(ToolTipContent)) `
       transform: translate(100%,-50%);
       .ra-tooltip-message  {
         &:after {
-            top: 50%;
-            right: 100%;
-            margin-left: 0;
-            margin-top: -${arrowSize}px;
-            border-right-color: ${props => props.theme.colors[props.bgColor]};
+          top: 50%;
+          right: 100%;
+          margin-left: 0;
+          margin-top: -${arrowSize}px;
+          border-right-color: ${props => props.theme.colors[props.bgColor]};
         }
       }
     }

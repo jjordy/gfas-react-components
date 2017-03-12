@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf, action } from '@kadira/storybook'
 import Tooltip from './index'
 import { Divider, Flex, Heading, Button, Space } from 'components'
 
@@ -16,7 +16,7 @@ storiesOf('Tooltip', module)
           eventType='hover'
           direction='left'
           bgColor='success'>
-          <Button>
+          <Button onClick={action('Button 1 clicked')}>
             Tooltip Button
           </Button>
         </Tooltip>
@@ -26,7 +26,7 @@ storiesOf('Tooltip', module)
           eventType='hover'
           color='black'
           bgColor='warning'>
-          <Button>
+          <Button onClick={action('Button 2 clicked')}>
             Tooltip Button
           </Button>
         </Tooltip>
@@ -36,7 +36,7 @@ storiesOf('Tooltip', module)
           eventType='hover'
           direction='right'
           bgColor='success'>
-          <Button>
+          <Button onClick={action('Button clicked.')}>
             Tooltip Button
           </Button>
         </Tooltip>
